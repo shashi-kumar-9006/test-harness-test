@@ -4,19 +4,19 @@ clc;clear;close all;
 data=readtable("Inputs.xlsx");
 %--------------------------------------------------------------------------
 % reading time data 
-t=0:height(data)-1;
+time=data.Time;
 % height returns the number of rows in the data 
-time = t'; % Transpose of the array gives the table
+% time = t'; % Transpose of the array gives the table
 % -------------------------------------------------------------------------
 % valA and valB are two variables that contains the data extracted from
 % excel file's column 2 and 3 respectively
 
 % Input for First Variable
-valA = data(:,2);
+valA = data.A;
 % 2 represents column two
 
 % Input for Second Variable
-valB = data(:,3);
+valB = data.B;
 % 3 represents column three
 % -------------------------------------------------------------------------
 % Converting time data in Seconds
