@@ -1,4 +1,4 @@
-run("Test_Harness_Automation.m");
+%run("Test_Harness_Automation.m");
 %--------------------------------------------------------------------------
 % Provide the same filename created to store the test results
 exampleFile = 'Sample_Model_Results.mldatx';
