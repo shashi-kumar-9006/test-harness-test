@@ -10,13 +10,7 @@ pipeline {
         //        runMATLABCommand(command: 'disp("Hello World!")')
         //     }       
         // }
-       // stage('Testcases') {
-       //      steps {
-       //          runMATLABTests(testResultsJUnit: 'test-results/results.xml',
-       //                         codeCoverageCobertura: 'code-coverage/coverage.xml', 
-       //                           testResultsPDF: 'test-results/testreport.pdf')
-       //      }
-       //  }
+       
        // stage('Testcases') {
        //      steps {
        //          runMATLABTests(testResultsJUnit: 'test-results/results.xml',
@@ -34,6 +28,13 @@ pipeline {
           runMATLABCommand(command: 'Report_Generation')
         }
       }
+       stage('Testcases') {
+            steps {
+                runMATLABTests(testResultsJUnit: 'test-results/results.xml',
+                               codeCoverageCobertura: 'code-coverage/coverage.xml', 
+                                 testResultsPDF: 'test-results/testreport.pdf')
+            }
+        }
 
     }
    } 
