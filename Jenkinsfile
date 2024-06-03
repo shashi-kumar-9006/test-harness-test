@@ -17,6 +17,13 @@ pipeline {
        //                           testResultsPDF: 'test-results/testreport.pdf')
        //      }
        //  }
+       stage('Testcases') {
+            steps {
+                runMATLABTests(testResultsJUnit: 'test-results/results.xml',
+                               codeCoverageCobertura: 'code-coverage/coverage.xml', 
+                                 testResultsPDF: 'test-results/testreport.pdf')
+            }
+        }
       stage('Test Harness'){
         steps{
           runMATLABCommand(command: 'Test_Harness_Automation')
