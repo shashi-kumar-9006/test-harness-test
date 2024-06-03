@@ -22,6 +22,11 @@ pipeline {
           runMATLABCommand(command: 'Test_Harness_Automation')
         }
       }
+       stage('Test Harness1'){
+        steps{
+          runMATLABCommand(command: 'Report_Generation')
+        }
+      }
 
     }
    } 
